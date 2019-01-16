@@ -1,1 +1,1 @@
-{"category":"social"}
+{"category":"chatroom"}
