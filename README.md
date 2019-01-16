@@ -1,22 +1,34 @@
 # inappropriate-content
 
-List of inappropriate, illegal, scam, and plausible websites and words
+List of inappropriate, illegal, scam, plausible, and factual websites and words
 
 I haven't been able to find a useful open filter anywhere that holds websites and words that are inappropriate for use in most places, so I decided to build my own list out of websites I've seen that I know are bad, and some words too. These lists are free to use with no credit required. Feel free to open a PR adding anything you think may be missing, or if you find a website or word that's not actually inappropriate, you can open a PR to remove that too.
 
 ## Adding to the list
 
-To add a word to the list, simply create a file inside the words called the name of the word (for example, `words/foo` for the word `foo`). You can also add phrases, to do so just replace the spaces with underscores. If you are adding a website, add a file with the full domain name inside the websites folder and mark it as one of the [these categories](#website-categories) by putting the category name inside the file. Afterwards, you can open a PR to add it and I will review and merge.
+To add a word to the list, simply create a file inside the words called the name of the word (for example, `words/foo` for the word `foo`). You can also add phrases, to do so just replace the spaces with underscores. If you are adding a website, add a file with the full domain name inside the websites folder and mark it as one of the [these categories](#website-categories) by putting the category name inside the file as JSON with the key `category`. You'll also need to add an optional but recommended explanation of the site with the key `description` (if you find a site with no description, feel free to add one). Afterwards, you can open a PR to add it and I will review and merge.
 
 ## Using the list
 
-Before you use the list, you'd want to build the JSON files:
+Before you use the list, you'll want to build the JSON files:
 
 ```bash
-npm run build
+node build.js
 ```
 
-This will result in two files inside `dist/` (`words.json`, `websites.json`). Inside each JSON file is an array containing all entries. You can then scan each entry for inappropriate content, and filter as appropriate. I also plan to open an API sooner or later, so be on the lookout for that.
+This will result in two files inside `dist/` (`words.json`, `websites.json`). Inside each JSON file is an array containing all entries. You can then scan each entry for inappropriate content, and filter as appropriate. I also plan to open an API sooner or later, so be on the lookout for that. Websites will be categorized like this:
+
+```json
+[
+  {
+    "domain": "example.com",
+    "category": "plausible",
+    "explanation": "Example is an example domain. Blah blah blah..."
+  }
+]
+```
+
+Words will be sorted in an array as strings.
 
 ## Website Categories
 
@@ -40,3 +52,5 @@ This will result in two files inside `dist/` (`words.json`, `websites.json`). In
   - Any inappropriate content that does not match any other categories.
 - `plausible`
   - Any website that may not necessarily be inappropriate, but may need to be blocked in some cases.
+- `factual`
+  - Any website that contains factual information.

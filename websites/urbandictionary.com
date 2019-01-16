@@ -1,1 +1,1 @@
-inappropriate
+{"category":"inappropriate"}

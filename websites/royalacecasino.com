@@ -1,1 +1,1 @@
-gambling
+{"category":"gambling"}
