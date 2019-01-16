@@ -16,7 +16,7 @@ Before you use the list, you'll want to build the JSON files:
 node build.js
 ```
 
-This will result in two files inside `dist/` (`words.json`, `websites.json`). Inside each JSON file is an array containing all entries. You can then scan each entry for inappropriate content, and filter as appropriate. I also plan to open an API sooner or later, so be on the lookout for that. Websites will be categorized like this:
+This will result in two files inside `dist/` (`words.json`, `websites.json`). Inside each JSON file is an array containing all entries. You can then scan each entry for inappropriate content, and filter as appropriate. There is also [an API](https://github.com/OrdinaryJellyfish/inappropriate-content/wiki/API-Reference) if you'd like to use that. Websites will be categorized like this:
 
 ```json
 [
