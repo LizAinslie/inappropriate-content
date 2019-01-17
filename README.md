@@ -1,6 +1,6 @@
 # inappropriate-content
 
-List of inappropriate, illegal, scam, plausible, and factual websites and words
+List of inappropriate, illegal, scam, and plausible, websites and words
 
 I haven't been able to find a useful open filter anywhere that holds websites and words that are inappropriate for use in most places, so I decided to build my own list out of websites I've seen that I know are bad, and some words too. These lists are free to use with no credit required. Feel free to open a PR adding anything you think may be missing, or if you find a website or word that's not actually inappropriate, you can open a PR to remove that too.
 
