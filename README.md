@@ -52,5 +52,3 @@ Words will be sorted in an array as strings.
   - Any inappropriate content that does not match any other categories.
 - `plausible`
   - Any website that may not necessarily be inappropriate, but may need to be blocked in some cases.
-- `factual`
-  - Any website that contains factual information.
