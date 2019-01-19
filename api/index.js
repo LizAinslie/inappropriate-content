@@ -2,8 +2,8 @@
 Incomplete API for inappropriate-content project by NeotiDev
 */
 
-const websites = require("./database/websites");
-const words = require("./database/words");
+const websites = require("../websites");
+const words = require("../words");
 const fs = require("fs");
 const path = require("path");
 
