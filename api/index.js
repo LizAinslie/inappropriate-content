@@ -2,10 +2,10 @@
 Incomplete API for inappropriate-content project by NeotiDev
 */
 
-const websites = path.resolve(__dirname, "../websites");
-const words = path.resolve(__dirname, "../words");
 const fs = require("fs");
 const path = require("path");
+const websites = path.resolve(__dirname, "../websites");
+const words = path.resolve(__dirname, "../words");
 
 if (!fs.existsSync(path.resolve(__dirname, "./dist")))
   fs.mkdirSync(path.resolve(__dirname, "./dist"));
